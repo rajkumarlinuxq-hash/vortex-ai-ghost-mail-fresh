@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vortex Mega Offers</title>
     
+    <!-- 💰 Google AdSense Code -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5245797342116195" crossorigin="anonymous"></script>
 
     <style>
@@ -26,7 +27,6 @@
         .admin-panel input[type="file"] { background: #0f172a; border: 1px dashed #38bdf8; padding: 12px; color: #cbd5e1; }
         .admin-btn { background: #4ade80; color: #000; border: none; font-weight: bold; width: 100%; padding: 12px; border-radius: 8px; text-transform: uppercase; margin-top: 15px; }
         
-        /* 📜 Policy & Legal Section styling */
         .legal-footer { margin-top: 40px; padding: 15px; border-top: 1px solid #1e293b; font-size: 11px; color: #64748b; text-align: center; line-height: 1.6; }
         .legal-links { margin-bottom: 10px; }
         .legal-links a { color: #38bdf8; text-decoration: none; margin: 0 10px; font-weight: bold; }
@@ -34,7 +34,6 @@
     </style>
 </head>
 <body>
-
     <div class="container">
         <div id="adminPanel" class="admin-panel">
             <h3>🛠️ Add New Product Card</h3>
@@ -59,7 +58,7 @@
                 <a href="#terms">Terms of Service</a> | 
                 <a href="#contact">Contact Us</a>
             </div>
-            <p>© 2026 Vortex Mega Offers. All verified redirects are checked securely. We are not responsible for final checkout variations on partner apps.</p>
+            <p>© 2026 Vortex Mega Offers. All verified redirects are checked securely.</p>
             <button class="footer-admin-btn" onclick="toggleAdmin()">【 System Admin Login 】</button>
         </div>
     </div>
@@ -91,9 +90,8 @@
 
         function toggleAdmin() {
             const panel = document.getElementById('adminPanel');
-            if (panel.style.display === 'block') {
-                panel.style.display = 'none';
-            } else {
+            if (panel.style.display === 'block') { panel.style.display = 'none'; } 
+            else {
                 let pass = prompt("Rajkumar Bhai, Enter Secret Code:");
                 if (pass === "1234") { panel.style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' }); }
                 else { alert("Wrong Password!"); }
