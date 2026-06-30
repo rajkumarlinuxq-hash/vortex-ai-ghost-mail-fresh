@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vortex Mega Offers</title>
-    
-    <!-- 👑 AdSense Meta Tag Account Bypass -->
     <meta name="google-adsense-account" content="ca-pub-5245797342116195">
-    
-    <!-- 💰 Google AdSense Code -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5245797342116195" crossorigin="anonymous"></script>
-
     <style>
         body { margin:0; background:#0b111e; color:#fff; font-family:sans-serif; min-height:100vh; padding: 20px 0; display:flex; flex-direction:column; align-items:center; }
-        .container { max-width:450px; width:90%; text-align:center; box-sizing: border-box; }
+        .container { max-width:450px; width:90%; text-align:center; box-sizing: border-box; display:flex; flex-direction:column; align-items:center; }
         h1 { color:#ffe500; margin:0 0 5px 0; font-family:monospace; font-size:26px; text-transform:uppercase; letter-spacing: 1px; }
         .subtitle { color:#cbd5e1; font-size:12px; margin-bottom:25px; font-family:monospace; }
-        .deal-card { background:rgba(20,30,55,0.95); border-radius:16px; border:2px solid #2874f0; box-shadow:0 0 15px rgba(40,116,240,0.15); padding: 15px; margin-bottom: 25px; text-align: left; display: flex; flex-direction: column; box-sizing: border-box; }
+        .deal-card { background:rgba(20,30,55,0.95); border-radius:16px; border:2px solid #2874f0; box-shadow:0 0 15px rgba(40,116,240,0.15); padding: 15px; margin-bottom: 25px; text-align: left; display: flex; flex-direction: column; box-sizing: border-box; width: 100%; }
         .deal-p-img { width: 100%; height: auto; max-height: 250px; border-radius: 10px; object-fit: cover; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 12px; }
         .deal-info { margin-bottom: 15px; padding: 0 5px; }
         .deal-title { font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 8px; line-height: 1.4; }
@@ -25,38 +20,31 @@
         .admin-panel { display: none; background: #1e293b; border: 2px solid #ffe500; border-radius: 16px; padding: 20px; margin-bottom: 25px; text-align: left; box-sizing: border-box; width: 100%; }
         .admin-panel label { font-size: 12px; color: #94a3b8; display: block; margin-top: 10px; }
         .admin-panel input { width: 100%; padding: 10px; margin: 6px 0 12px 0; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: #fff; box-sizing: border-box; }
-        .admin-panel input[type="file"] { background: #0f172a; border: 1px dashed #38bdf8; padding: 12px; color: #cbd5e1; }
         .admin-btn { background: #4ade80; color: #000; border: none; font-weight: bold; width: 100%; padding: 12px; border-radius: 8px; text-transform: uppercase; margin-top: 15px; }
-        .legal-footer { margin-top: 40px; padding: 15px; border-top: 1px solid #1e293b; font-size: 11px; color: #64748b; text-align: center; line-height: 1.6; }
-        .legal-links { margin-bottom: 10px; }
-        .legal-links a { color: #38bdf8; text-decoration: none; margin: 0 10px; font-weight: bold; }
-        .footer-admin-btn { background: none; border: none; color: #475569; font-size: 12px; cursor: pointer; text-decoration: underline; margin-top: 10px; }
+        .footer-admin-btn { background: none; border: none; color: #475569; font-size: 11px; cursor: pointer; text-decoration: underline; margin-top: 15px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div id="adminPanel" class="admin-panel">
             <h3>🛠️ Add New Product Box</h3>
-            <label>📸 Gallery Se Photo:</label>
+            <label>📸 Select Photo:</label>
             <input type="file" id="pImgFile" accept="image/*">
             <label>📦 Product Name:</label>
             <input type="text" id="pTitle" placeholder="Product Name">
             <label>🔗 Offer Link:</label>
             <input type="text" id="pLink" placeholder="Offer Link">
-            <label>💰 Rate:</label>
+            <label>💰 Price:</label>
             <input type="text" id="pPrice" placeholder="Price">
             <button class="admin-btn" onclick="addNewProduct()">Add Product Live</button>
         </div>
         <h1>VORTEX MEGA OFFERS</h1>
         <div class="subtitle">// LIVE VERIFIED APP REDIRECTS //</div>
-        <div id="deals-container"></div>
-        <div class="legal-footer">
-            <div class="legal-links">
-                <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a> | <a href="#contact">Contact Us</a>
-            </div>
-            <p>© 2026 Vortex Mega Offers. All verified redirects checked securely.</p>
-            <button class="footer-admin-btn" onclick="toggleAdmin()">【 System Admin Login 】</button>
-        </div>
+        <div id="deals-container" style="width:100%;"></div>
+        
+        __LEGAL_CONTENT_BOX__
+        
+        <button class="footer-admin-btn" onclick="toggleAdmin()">【 System Admin Login 】</button>
     </div>
     <script>
         const defaultDeals = [{ title: "🛍️ Upto 87% OFF On Branded Kurtis (Festive Deal)", price: "Best Offer Price", link: "https://bitli.in/H68v972", img: "https://i.ibb.co/v6WbY8XQ/Screenshot-2026-06-26-11-03-23-87-92b64b2a7aa6eb3771ed6e18d0029815.jpg" }];
@@ -73,11 +61,11 @@
         function toggleAdmin() {
             const panel = document.getElementById('adminPanel');
             if (panel.style.display === 'block') { panel.style.display = 'none'; } 
-            else { let pass = prompt("Rajkumar Bhai, Enter Secret Code:"); if (pass === "1234") { panel.style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' }); } else { alert("Wrong Password!"); } }
+            else { let pass = prompt("Enter Secret Code:"); if (pass === "1234") { panel.style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' }); } else { alert("Wrong Password!"); } }
         }
         function addNewProduct() {
             const title = document.getElementById('pTitle').value; const link = document.getElementById('pLink').value; const price = document.getElementById('pPrice').value; const fileInput = document.getElementById('pImgFile');
-            if(!title || !link || !price) { alert("Bhai, sari details dalo!"); return; }
+            if(!title || !link || !price) { alert("Sari details dalo!"); return; }
             if (fileInput.files && fileInput.files[0]) { const reader = new FileReader(); reader.onload = function(e) { saveProduct(title, price, link, e.target.result); }; reader.readAsDataURL(fileInput.files[0]); } else { saveProduct(title, price, link, ""); }
         }
         function saveProduct(title, price, link, imgData) {
